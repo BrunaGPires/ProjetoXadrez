@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace xadrez.tabuleiro
+namespace Xadrez.tabuleiro
 {
     internal class Peca
     {
@@ -13,12 +13,18 @@ namespace xadrez.tabuleiro
         public int qtdeMovimentos {get; protected set; }
         public Tabuleiro tab { get; protected set; }
 
-        public Peca(Posicao posicao, Cor cor, Tabuleiro tab)
+        public Peca(Cor cor, Tabuleiro tab)
         {
-            this.posicao = posicao;
+            this.posicao = null;
             this.cor = cor;
             this.tab = tab;
             this.qtdeMovimentos = 0;
+        }
+
+        public Peca(Tabuleiro tab, Cor cor)
+        {
+            this.tab = tab;
+            this.cor = cor;
         }
     }
 }
