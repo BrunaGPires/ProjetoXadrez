@@ -45,6 +45,7 @@ namespace Xadrez.tabuleiro
             p.posicao = pos;
         }
 
+
         public Peca retirarPeca(Posicao pos)
         {
             if (peca(pos) == null)
@@ -73,5 +74,7 @@ namespace Xadrez.tabuleiro
                 throw new TabuleiroException("Posição inválida");
             }
         }
+
+        
     }
 }
